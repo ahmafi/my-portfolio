@@ -27,6 +27,8 @@ export default createGlobalStyle`${css`
     font-size: 1.6rem;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    background-color: ${({ theme }) => theme.backgroundColor};
+    color: ${({ theme }) => theme.color};
   }
 
   img,
