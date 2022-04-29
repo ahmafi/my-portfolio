@@ -1,0 +1,149 @@
+name: امیرحسین مافی
+job: Front End Developer
+
+info:
+  - name: location
+    content: تهران، تهران
+    icon: location
+  - name: phone
+    content: ۰۹۹۳ ۵۵۹ ۹۵۳۰
+    link: tel:09935599530
+    icon: phone
+  - name: email
+    content: amir77mafi@gmail.com
+    link: mailto:amir77mafi@gmail.com
+    icon: email
+  - name: website
+    content: ahmafi.ir
+    link: https://ahmafi.ir
+    icon: website
+  - content: github.com/ahmafi
+    link: https://github.com/ahmafi
+    icon: github
+  - content: stk.so/amir
+    link: https://stackoverflow.com/users/4725780/amir
+    icon: stackoverflow
+
+sections:
+  aboutMe:
+    header:
+      title: درباره من
+      icon: about-me
+    content: متولد ۱۳۷۷، یه برنامه نویس خودآموز که عاشق کد زدن و یادگیری چیزای جدیده. علاقه‌مند به همکاری با یه تیم حرفه‌ای و به دنبال پیشرفت در حوزه برنامه‌ نویسی وب با تمرکز بر front‑end (در مسیری که پیش‌روم قرار گرفته در قسمت back‑end هم فعالیت داشتم)
+
+  skills:
+    header:
+      title: مهارت ها
+      icon: skills
+    content:
+      - JavaScript
+      - ES6
+      - React
+      - React Router
+      - Webpack
+      - Parcel
+      - Jest
+      - TypeScript
+      - Next
+      - CSS
+      - Sass
+      - Tailwind
+      - Styled-Components
+      - HTML
+      - REST
+      - OpenAPI
+      - GraphQL
+      - Postman
+      - Git
+      - Linux
+      - Docker
+      - Scrum
+      - Trello
+
+  languages:
+    header:
+      title: زبان ها
+      icon: languages
+    content:
+      - انگلیسی
+
+  projects:
+    header:
+      title: پروژه ها
+      icon: projects
+    content:
+      - title: وبسایت webstack.ir
+        subtitle: Front End Developer
+        links:
+          - name: https://webstack.ir
+            icon: external
+          - name: https://github.com/ahmafi/webstack
+            icon: github
+        desc: در این وبسایت اخبار و مطالب مربوط به برنامه نویسی وب که مطالعه می‌کنم رو با بقیه به اشتراک میزارم.
+        techs:
+          - TypeScript
+          - Next.js
+          - React
+          - Sass
+        startDate: اردیبهشت ۱۴۰۱
+        endDate: اکنون
+      - title: پورتفولیو ahmafi.ir
+        subtitle: Front End Developer
+        links:
+          - name: https://ahmafi.ir
+            icon: external
+          - name: https://github.com/ahmafi/my-portfolio
+            icon: github
+        desc: نمونه‌کارها، رزومه و بقیه مطالب مربوط به خودم رو اینجا میزارم
+        techs:
+          - JavaScript
+          - Gatsby
+          - React
+          - Styled-Components
+        startDate: فروردین ۱۴۰۱
+        endDate: اکنون
+
+  experiences:
+    header:
+      title: سوابق شغلی
+      icon: experiences
+    content:
+      - title: Full Stack Developer
+        subtitle: لحظه نگار، تهران (فریلنسر)
+        desc: پیاده‌سازی کامل یک سرویس Web Scraping به صورت  API همراه با کنترل پنل ادمین.
+        techs:
+          - React
+          - React-Router
+          - Styled-Components
+          - Jest
+          - JSDoc
+          - Node.js
+          - Express
+          - REST
+          - OpenAPI
+          - Postman
+          - Winston
+        startDate: بهمن ۱۴۰۰
+        endDate: اردیبهشت ۱۴۰۱
+
+  awards:
+    header:
+      title: جوایز و افتخارات
+      icon: awards
+    content:
+      - title: رتبه اول هکاتون برنامه‌نویسی لحظه نگار
+        links:
+          - name: https://blog.lahzenegar.com/اختتامیه-مسابقه-برنامهنویسی-لحظه
+            icon: external
+        desc: در این مسابقه که با کمک کوئرا و با حضور ۲۵۴ شرکت کننده برگزار شد، هدف نهایی نوشتن برنامه‌ای برای re-stream کردن وبینارهای شرکت لحظه نگار بود. در این برنامه از تکنولوژی‌هایی مانند Node.js، Express، Headless Chromium، ffmpeg استفاده شد. همچنین بعد از اتمام هکاتون، حدود ۳ ماه به صورت ریموت با این مجموعه فعالیت داشتم.
+        endDate: مهر ۱۳۹۹
+
+  educations:
+    header:
+      title: تحصیلات
+      icon: educations
+    content:
+      - title: کارشناسی، مهندسی کامپیوتر
+        desc: دانشگاه تحصیلات تکمیلی در علوم پایه زنجان
+        startDate: مهر ۱۳۹۶
+        endDate: مهر ۱۴۰۰

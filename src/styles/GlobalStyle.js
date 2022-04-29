@@ -1,5 +1,11 @@
 import { createGlobalStyle, css } from 'styled-components';
 
+import '@fontsource/ubuntu/400.css';
+import '@fontsource/comic-neue/400.css';
+import '@fontsource/comic-neue/700.css';
+
+import MikhakWoff2 from '../fonts/Mikhak[DSTY,KSHD,wght].woff2'; //TODO: add fallback static fonts
+
 // workaround: prettier doesn't format createGlobalStyle,
 // wrap "createGlobalStyle" with "css" in the line below to get formatting
 export default createGlobalStyle`${css`
@@ -14,28 +20,24 @@ export default createGlobalStyle`${css`
     padding: 0;
   }
 
-  :root {
-    font-size: 62.5%;
-  }
-
   html:focus-within {
     scroll-behavior: smooth;
   }
 
   body {
-    height: 100vh;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
     background-color: ${({ theme }) => theme.backgroundColor};
+  }
+
+  body {
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
     color: ${({ theme }) => theme.color};
   }
 
   img,
   picture,
   video,
-  canvas,
-  svg {
+  canvas {
     display: block;
     max-width: 100%;
   }
@@ -71,5 +73,18 @@ export default createGlobalStyle`${css`
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
+  }
+
+  @font-face {
+    font-family: 'Mikhak Variable';
+    src: url(${MikhakWoff2}) format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0600-06FF;
+  }
+
+  @page {
+    margin: 1.27cm;
   }
 `}`;
