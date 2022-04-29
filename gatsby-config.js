@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `A.H.Mafi`,
-    siteUrl: `https://ahmafi.ir`,
+    siteUrl: `https://www.ahmafi.ir`,
   },
   plugins: [
     'gatsby-plugin-styled-components',
