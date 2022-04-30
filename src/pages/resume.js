@@ -11,6 +11,8 @@ import AboutMe from '../components/resume/sections/AboutMe';
 import Skills from '../components/resume/sections/Skills';
 import General from '../components/resume/sections/General';
 
+const smallerThanA4 = `screen and (max-width: 21cm)`;
+
 const Page = styled.main`
   display: flex;
   justify-content: space-between;
@@ -23,27 +25,46 @@ const Page = styled.main`
   font-family: 'Mikhak Variable', 'Comic Neue', sans-serif;
   font-variation-settings: 'DSTY' 2;
 
+  @media ${smallerThanA4} {
+    width: 100%;
+    margin: 0;
+    padding: 2em;
+    height: auto;
+    /* height: 100%; */
+    flex-direction: column;
+    align-items: center;
+  }
+
   @media print {
+    margin: 0;
     margin: 0 auto;
   }
 `;
 
-const FirstCol = styled.div`
+const Side = styled.div`
   display: flex;
   flex-direction: column;
   width: 30%;
 
   .avatar {
     align-self: center;
-    border: 2px solid ${({ theme }) => theme.accentColor};
+    width: 160px;
     border-radius: 50%;
     background-color: ${({ theme }) => theme.accentColor};
     overflow: visible;
   }
+
+  @media ${smallerThanA4} {
+    width: 100%;
+  }
 `;
 
-const SecondCol = styled.div`
+const Main = styled.div`
   width: 68%;
+
+  @media ${smallerThanA4} {
+    width: 100%;
+  }
 `;
 
 const Name = styled.h1`
@@ -62,7 +83,7 @@ function ResumePage() {
   const {
     aboutMe,
     skills,
-    languages,
+    // languages,
     projects,
     experiences,
     awards,
@@ -74,18 +95,19 @@ function ResumePage() {
       <Helmet htmlAttributes={{ dir: 'rtl', lang: 'fa' }}>
         <title>Amir Hossein Mafi | Resume</title>
         <meta name="color-scheme" content="light" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
       </Helmet>
       <ThemeProvider theme={{ ...resumeTheme }}>
         <GlobalStyle />
         <Page>
-          <FirstCol>
+          <Side>
             <StaticImage
               src={'../images/AmirHosseinMafi.png'}
               alt={'Amir Hossein Mafi'}
               loading={'eager'}
               placeholder={'none'}
-              width={160}
-              height={160}
+              width={640}
+              height={640}
               className={'avatar'}
             />
             <Name>{data.name}</Name>
@@ -94,8 +116,8 @@ function ResumePage() {
             <Section Component={AboutMe} sectionData={aboutMe} />
             <Section Component={Skills} sectionData={skills}></Section>
             {/* <Section Component={General} sectionData={languages}></Section> */}
-          </FirstCol>
-          <SecondCol>
+          </Side>
+          <Main>
             {[projects, experiences, awards, educations].map((general) => (
               <Section
                 key={general.header.title}
@@ -103,7 +125,7 @@ function ResumePage() {
                 sectionData={general}
               />
             ))}
-          </SecondCol>
+          </Main>
         </Page>
       </ThemeProvider>
     </>

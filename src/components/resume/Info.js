@@ -2,9 +2,7 @@ import React from 'react';
 import styled, { useTheme } from 'styled-components';
 import Icon from './Icon';
 
-const InfoBlock = styled.div`
-  margin-bottom: 1em;
-`;
+const InfoBlock = styled.div``;
 
 const Container = styled.div`
   display: flex;

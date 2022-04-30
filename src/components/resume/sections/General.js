@@ -9,7 +9,7 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const Project = styled.div`
+const Item = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 1em;
@@ -29,6 +29,14 @@ const Title = styled.div`
   a {
     margin-right: 0.25em;
   }
+
+  @media screen and (max-width: 480px) {
+    justify-content: space-between;
+  }
+`;
+
+const Links = styled.div`
+  display: flex;
 `;
 
 const Subtitle = styled.div`
@@ -37,6 +45,7 @@ const Subtitle = styled.div`
 
 const Desc = styled.div`
   font-size: 0.9rem;
+  text-align: justify;
 `;
 
 function General({ content }) {
@@ -46,23 +55,26 @@ function General({ content }) {
     <Container>
       {content.map(
         ({ title, subtitle, links, desc, techs, startDate, endDate }) => (
-          <Project>
+          <Item>
             <Date startDate={startDate} endDate={endDate} />
             <Content>
               <Title>
                 {title}
-                {links &&
-                  links.map((link) => (
-                    <a href={link.name}>
-                      <Icon name={link.icon} color={theme.accentColor} />
-                    </a>
-                  ))}
+                {links && (
+                  <Links>
+                    {links.map((link) => (
+                      <a href={link.name}>
+                        <Icon name={link.icon} color={theme.accentColor} />
+                      </a>
+                    ))}
+                  </Links>
+                )}
               </Title>
               {subtitle && <Subtitle>{subtitle}</Subtitle>}
               {desc && <Desc>{desc}</Desc>}
               {techs && <Techs techs={techs} />}
             </Content>
-          </Project>
+          </Item>
         )
       )}
     </Container>
