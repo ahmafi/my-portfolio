@@ -20,7 +20,9 @@ function Skills({ content }) {
   return (
     <Container>
       {content.map((skill) => (
-        <Skill key={skill}>{skill}</Skill>
+        <Skill key={skill}>
+          {skill.replace('-', '\u2011').replace(' ', '\u00A0')}
+        </Skill>
       ))}
     </Container>
   );
