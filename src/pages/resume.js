@@ -49,8 +49,8 @@ const Side = styled.div`
   .avatar {
     align-self: center;
     width: 160px;
+    border: 4px solid ${({ theme }) => theme.accentColor};
     border-radius: 50%;
-    background-color: ${({ theme }) => theme.accentColor};
     overflow: visible;
   }
 
