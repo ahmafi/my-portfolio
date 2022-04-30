@@ -51,7 +51,7 @@ const commonTheme = {
 export const theme = { ...darkTheme, ...commonTheme };
 
 export const resumeTheme = {
-  backgroundColor: 'rgb(204, 204, 204)',
+  backgroundColor: '#fff',
   color: '#000',
   accentColor: '#512da8',
 };
