@@ -41,10 +41,13 @@ const Links = styled.div`
 
 const Subtitle = styled.div`
   font-size: 0.8rem;
+  font-weight: 700;
+  opacity: 0.7;
 `;
 
 const Desc = styled.div`
   font-size: 0.9rem;
+  font-weight: 470;
   text-align: justify;
 `;
 

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const Text = styled.p`
   text-align: center;
+  font-weight: 470;
 `;
 
 function AboutMe({ content }) {
