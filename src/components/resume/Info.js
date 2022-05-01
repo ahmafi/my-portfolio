@@ -2,11 +2,14 @@ import React from 'react';
 import styled, { useTheme } from 'styled-components';
 import Icon from './Icon';
 
-const InfoBlock = styled.div``;
+const InfoBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
 
 const Container = styled.div`
   display: flex;
-  justify-content: start;
   align-items: center;
   font-size: 1.1rem;
   text-decoration: none;
