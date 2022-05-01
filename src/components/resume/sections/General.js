@@ -58,7 +58,7 @@ function General({ content }) {
     <Container>
       {content.map(
         ({ title, subtitle, links, desc, techs, startDate, endDate }) => (
-          <Item>
+          <Item key={`${title}${subtitle}`}>
             <Date startDate={startDate} endDate={endDate} />
             <Content>
               <Title>
@@ -66,7 +66,7 @@ function General({ content }) {
                 {links && (
                   <Links>
                     {links.map((link) => (
-                      <a href={link.name}>
+                      <a href={link.name} key={link.name}>
                         <Icon name={link.icon} color={theme.accentColor} />
                       </a>
                     ))}

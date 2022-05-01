@@ -25,7 +25,7 @@ function Info({ data }) {
     <InfoBlock>
       {data.map((info) => (
         <Container
-          key={info.name}
+          key={info.content}
           href={info.link}
           as={info.hasOwnProperty('link') ? 'a' : null}
         >

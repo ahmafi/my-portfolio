@@ -15,7 +15,9 @@ function Techs({ techs }) {
   return (
     <Container dir="ltr">
       {techs.map((tech) => (
-        <Tech>{tech.replace('-', '\u2011').replace(' ', '\u00A0')}</Tech>
+        <Tech key={tech}>
+          {tech.replace('-', '\u2011').replace(' ', '\u00A0')}
+        </Tech>
       ))}
     </Container>
   );

@@ -14,8 +14,8 @@ const DateItem = styled.div`
   padding-right: 0.75em;
   text-align: right;
 
-  ${({ end }) =>
-    !end &&
+  ${({ endDate }) =>
+    !endDate &&
     css`
       padding-bottom: 0.5em;
     `};
@@ -23,8 +23,8 @@ const DateItem = styled.div`
   ::before {
     content: '';
 
-    ${({ end }) =>
-      end
+    ${({ endDate }) =>
+      endDate
         ? css`
             border: ${`${DotWidth / 2}px`} solid gray;
             background-color: gray;
@@ -92,7 +92,7 @@ function Date({ startDate, endDate }) {
           </DateItem>
         </>
       )}
-      <DateItem end>{endDate}</DateItem>
+      <DateItem endDate>{endDate}</DateItem>
     </Container>
   );
 }
