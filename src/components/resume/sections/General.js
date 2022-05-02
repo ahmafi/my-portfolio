@@ -47,7 +47,7 @@ const Subtitle = styled.div`
 `;
 
 const Desc = styled.div`
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 470;
   text-align: justify;
 `;

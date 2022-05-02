@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  font-size: 0.75rem;
+  font-size: 0.77rem;
 `;
 
 const Tech = styled.span`
