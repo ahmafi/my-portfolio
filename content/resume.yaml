@@ -33,7 +33,7 @@ sections:
 
   skills:
     header:
-      title: مهارت ها
+      title: مهارت‌ها
       icon: skills
     content:
       - JavaScript
@@ -61,14 +61,14 @@ sections:
 
   languages:
     header:
-      title: زبان ها
+      title: زبان‌ها
       icon: languages
     content:
       - انگلیسی
 
   projects:
     header:
-      title: پروژه ها
+      title: پروژه‌ها
       icon: projects
     content:
       - title: وبسایت webstack.ir
