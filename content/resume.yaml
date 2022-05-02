@@ -1,5 +1,5 @@
 name: امیرحسین مافی
-job: Front End Developer
+job: Front-End Developer
 
 info:
   - name: location
@@ -29,7 +29,7 @@ sections:
     header:
       title: درباره من
       icon: about-me
-    content: متولد ۱۳۷۷، یه برنامه نویس خودآموز که عاشق کد زدن و یادگیری چیزای جدیده. علاقه‌مند به همکاری با یه تیم حرفه‌ای و به دنبال پیشرفت در حوزه برنامه‌ نویسی وب با تمرکز بر front‑end (در مسیری که پیش‌روم قرار گرفته در قسمت back‑end هم فعالیت داشتم)
+    content: متولد ۱۳۷۷، یه برنامه‌نویس خودآموز که عاشق کدزدن و یادگیری چیزای جدیده. علاقه‌مند به همکاری با یه تیم حرفه‌ای و به دنبال پیشرفت در حوزه برنامه‌‌نویسی وب با تمرکز بر front‑end. حوزه‌های مختلفی از برنامه‌نویسی رو امتحان کردم و به برنامه‌نویسی وب بیشتر از همه  علاقه‌مند شدم.
 
   skills:
     header:
@@ -45,11 +45,10 @@ sections:
       - Jest
       - TypeScript
       - Next
-      - CSS
+      - HTML/CSS
       - Sass
       - Tailwind
       - Styled-Components
-      - HTML
       - REST
       - OpenAPI
       - GraphQL
@@ -79,10 +78,10 @@ sections:
             icon: external
           - name: https://github.com/ahmafi/webstack
             icon: github
-        desc: در این وبسایت اخبار و مطالب مربوط به برنامه نویسی وب که مطالعه می‌کنم رو با بقیه به اشتراک میزارم.
+        desc: این وبسایت رو با تکنولوژی‌هایی که این پایین ذکر شده درست کردم و داخلش مطالب مربوط به برنامه‌نویسی وب که به نظرم جالب باشه رو با بقیه به اشتراک میزارم.
         techs:
           - TypeScript
-          - Next.js
+          - Next
           - React
           - Sass
         startDate: اردیبهشت ۱۴۰۱
@@ -94,7 +93,7 @@ sections:
             icon: external
           - name: https://github.com/ahmafi/my-portfolio
             icon: github
-        desc: نمونه‌کارها، رزومه و بقیه مطالب مربوط به خودم رو اینجا میزارم
+        desc: نمونه‌کارها، رزومه و بقیه مطالب مربوط به خودم رو اینجا میزارم. همین رزومه‌ای که الان دارید میخونید رو هم با این تکنولوژی‌ها درست کردم و میتونید اینجا پیداش کنید.
         techs:
           - JavaScript
           - Gatsby
@@ -108,21 +107,22 @@ sections:
       title: سوابق شغلی
       icon: experiences
     content:
-      - title: Full Stack Developer
-        subtitle: لحظه نگار، تهران (فریلنسر)
-        desc: پیاده‌سازی کامل یک سرویس Web Scraping به صورت  API همراه با کنترل پنل ادمین.
+      - title: Full-Stack Developer
+        subtitle: لحظه نگار، تهران / فریلنس
+        desc: پیاده‌سازی کامل یک سرویس Web-Scraping که نتایج رو به صورت API نمایش میده. میتونیم تنظیمات این API رو با یک کنترل‌پنل که ادمین به اون دسترسی داره و با React نوشته شده کنترل کنیم.
         techs:
           - React
           - React-Router
           - Styled-Components
           - Jest
           - JSDoc
-          - Node.js
+          - Node
           - Express
           - REST
           - OpenAPI
           - Postman
           - Winston
+          - JWT-Auth
         startDate: بهمن ۱۴۰۰
         endDate: اردیبهشت ۱۴۰۱
 
@@ -135,8 +135,16 @@ sections:
         links:
           - name: https://blog.lahzenegar.com/اختتامیه-مسابقه-برنامهنویسی-لحظه
             icon: external
-        desc: در این مسابقه که با کمک کوئرا و با حضور ۲۵۴ شرکت کننده برگزار شد، هدف نهایی نوشتن برنامه‌ای برای re-stream کردن وبینارهای شرکت لحظه نگار بود. در این برنامه از تکنولوژی‌هایی مانند Node.js، Express، Headless Chromium، ffmpeg استفاده شد. همچنین بعد از اتمام هکاتون، حدود ۳ ماه به صورت ریموت با این مجموعه فعالیت داشتم.
+        desc: در این مسابقه که با کمک کوئرا و با حضور ۲۵۴ شرکت‌کننده برگزار شد، هدف نهایی نوشتن برنامه‌ای برای re-stream کردن وبینارهای شرکت لحظه‌نگار بود. همچنین بعد از اتمام هکاتون، حدود ۳ ماه به صورت ریموت با این مجموعه فعالیت داشتم. با وجود اینکه این مسابقه بیشتر در حوزه‌ی back-end بود، اما خیلی از تجربه‌هایی که کسب کردم تو front-end هم به دردم خوردن.
         endDate: مهر ۱۳۹۹
+        techs:
+          - JavaScript
+          - Node
+          - NPM
+          - Nodemon
+          - Express
+          - Puppeteer
+          - Commander
 
   educations:
     header:
