@@ -107,7 +107,7 @@ function ResumePage() {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta
           name="description"
-          content="سلام من امیرحسین مافی هستم و رزومه من رو میتونید اینجا مشاهده کنید. همچنین میتونید اونو پرینت بگیرید یا دانلود کنید."
+          content="رزومه امیرحسین مافی. برنامه نویس front-end"
         />
       </Helmet>
       <ThemeProvider theme={{ ...resumeTheme }}>
