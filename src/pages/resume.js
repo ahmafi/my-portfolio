@@ -101,10 +101,14 @@ function ResumePage() {
 
   return (
     <>
-      <Helmet htmlAttributes={{ dir: 'rtl', lang: 'fa' }}>
-        <title>Amir Hossein Mafi | Resume</title>
+      <Helmet htmlAttributes={{ dir: 'rtl', lang: 'fa-IR' }}>
+        <title>امیرحسین مافی | رزومه</title>
         <meta name="color-scheme" content="light" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta
+          name="description"
+          content="سلام من امیرحسین مافی هستم و رزومه من رو میتونید اینجا مشاهده کنید. همچنین میتونید اونو پرینت بگیرید یا دانلود کنید."
+        />
       </Helmet>
       <ThemeProvider theme={{ ...resumeTheme }}>
         <GlobalStyle />
