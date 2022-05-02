@@ -23,12 +23,8 @@ const Content = styled.div`
 
 const Title = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   font-weight: 700;
-
-  a {
-    margin-right: 0.25em;
-  }
 
   @media screen and (max-width: 480px) {
     justify-content: space-between;
@@ -37,6 +33,10 @@ const Title = styled.div`
 
 const Links = styled.div`
   display: flex;
+
+  > * {
+    margin-right: 0.4em;
+  }
 `;
 
 const Subtitle = styled.div`
@@ -67,7 +67,12 @@ function General({ content }) {
                   <Links>
                     {links.map((link) => (
                       <a href={link.name} key={link.name}>
-                        <Icon name={link.icon} color={theme.accentColor} />
+                        <Icon
+                          name={link.icon}
+                          color={theme.accentColor}
+                          width={1.1}
+                          clickable
+                        />
                       </a>
                     ))}
                   </Links>

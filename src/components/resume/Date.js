@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 const Container = styled.div`
   font-size: 0.75rem;
   position: relative;
+  margin-left: 1em;
 `;
 
 const DotWidth = 9;

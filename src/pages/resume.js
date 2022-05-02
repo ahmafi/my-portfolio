@@ -10,8 +10,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import AboutMe from '../components/resume/sections/AboutMe';
 import Skills from '../components/resume/sections/Skills';
 import General from '../components/resume/sections/General';
-
-const smallerThanA4 = `screen and (max-width: 21cm)`;
+import { smallerThan500, smallerThanA4 } from '../components/resume/media';
 
 const Page = styled.main`
   display: flex;
@@ -30,13 +29,17 @@ const Page = styled.main`
   border-radius: 8px;
 
   @media ${smallerThanA4} {
-    width: 100%;
-    margin: 0;
-    padding: 2em;
+    width: 80%;
+    margin: 1em auto 2em;
+    box-shadow: none;
+    padding: 0;
     height: auto;
-    /* height: 100%; */
     flex-direction: column;
     align-items: center;
+  }
+
+  @media ${smallerThan500} {
+    width: 90%;
   }
 
   @media print {
@@ -75,12 +78,14 @@ const Name = styled.h1`
   font-size: 1.9rem;
   align-self: center;
   margin-bottom: 0.1em;
+  text-align: center;
 `;
 
 const Job = styled.h2`
   font-size: 1.1rem;
   align-self: center;
   margin-bottom: 0.4em;
+  text-align: center;
 `;
 
 function ResumePage() {

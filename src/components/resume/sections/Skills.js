@@ -14,6 +14,7 @@ const Skill = styled.div`
   border-radius: 4px;
   font-size: 0.95rem;
   font-weight: 700;
+  text-align: center;
 `;
 
 function Skills({ content }) {

@@ -28,7 +28,7 @@ function SectionHeader({ title, icon }) {
 
   return (
     <Container>
-      <Icon name={icon} color={theme.accentColor} width={'1.25em'} />
+      <Icon name={icon} color={theme.accentColor} width={1.25} />
       <Title>{title}</Title>
       <Line />
     </Container>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 
 // FIXME: There should be a better dynamic import solution
 // or a solution without importing
@@ -18,6 +19,7 @@ import ProjectsIcon from '../../images/icons/projects.inline.svg';
 import SkillsIcon from '../../images/icons/skills.inline.svg';
 import StackoverflowIcon from '../../images/icons/stackoverflow.inline.svg';
 import WebsiteIcon from '../../images/icons/website.inline.svg';
+import { smallerThan500, smallerThanA4 } from './media';
 
 const IconNames = {
   'about-me': AboutMeIcon,
@@ -39,21 +41,41 @@ const IconNames = {
 const Container = styled.div`
   width: ${({ w }) => w};
   height: ${({ h }) => h};
-  margin-bottom: 0.25em;
 
   svg {
     fill: ${({ c }) => c};
   }
 `;
 
-function Icon({ name, color, width = '1em', height }) {
+function Icon({ name, color, width = 1, height, clickable }) {
   height = height ?? width;
 
   const IconTag = IconNames[name];
 
+  const isSmallerThanA4 = useMediaQuery({ query: smallerThanA4 });
+  const isSmallerThan500 = useMediaQuery({ query: smallerThan500 });
+
+  let resWidth = width;
+  let resHeight = height;
+
+  if (clickable) {
+    if (isSmallerThanA4) {
+      resWidth = width * 1.2;
+      resHeight = height * 1.2;
+    }
+
+    if (isSmallerThan500) {
+      resWidth = width * 1.1;
+      resHeight = height * 1.1;
+    }
+  }
+
+  resWidth = `${resWidth}em`;
+  resHeight = `${resHeight}em`;
+
   return (
-    <Container c={color} w={width} h={height}>
-      <IconTag width={width} height={height} />
+    <Container c={color} w={resWidth} h={resHeight}>
+      <IconTag width={resWidth} height={resHeight} />
     </Container>
   );
 }
