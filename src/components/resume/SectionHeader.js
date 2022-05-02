@@ -17,9 +17,8 @@ const Title = styled.h3`
 
 const Line = styled.span`
   flex-grow: 2;
-  height: 3px;
+  border-bottom: 3px solid ${({ theme }) => theme.accentColor};
   border-radius: 4px;
-  background-color: ${({ theme }) => theme.accentColor};
   margin-right: 4px;
 `;
 
