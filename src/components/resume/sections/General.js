@@ -24,7 +24,8 @@ const Content = styled.div`
 const Title = styled.div`
   display: flex;
   align-items: flex-start;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 560;
 
   @media screen and (max-width: 480px) {
     justify-content: space-between;
@@ -41,8 +42,8 @@ const Links = styled.div`
 
 const Subtitle = styled.div`
   font-size: 0.8rem;
-  font-weight: 700;
-  opacity: 0.7;
+  font-weight: 560;
+  color: ${({ theme }) => theme.color2};
 `;
 
 const Desc = styled.div`
