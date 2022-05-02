@@ -44,7 +44,13 @@ const Page = styled.main`
 
   @media print {
     margin: 0;
-    margin: 0 auto;
+    height: 100%;
+    box-shadow: none;
+
+    @page {
+      margin: 0;
+      size: A4 portrait;
+    }
   }
 `;
 

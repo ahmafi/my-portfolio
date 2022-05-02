@@ -25,12 +25,9 @@ export default createGlobalStyle`${css`
   }
 
   body {
-    background-color: ${({ theme }) => theme.backgroundColor};
-  }
-
-  body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    background-color: ${({ theme }) => theme.backgroundColor};
     color: ${({ theme }) => theme.color};
   }
 
@@ -82,9 +79,5 @@ export default createGlobalStyle`${css`
     font-style: normal;
     font-display: swap;
     unicode-range: U+0600-06FF;
-  }
-
-  @page {
-    margin: 1.27cm;
   }
 `}`;
