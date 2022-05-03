@@ -77,9 +77,9 @@ const DateItem = styled.div`
 const Line = styled.div`
   position: absolute;
   top: calc(${`${DotTop}px`} + ${`${DotWidth / 2}px`});
-  right: 1px;
+  right: 0px;
   height: calc(100% - ${`${DotWidth}px`});
-  border-right: 2px dotted gray;
+  border-right: 3px dotted gray;
 `;
 
 function Date({ startDate, endDate }) {
