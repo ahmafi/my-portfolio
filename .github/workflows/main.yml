@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
 
+env:
+  PUPPETEER_PRODUCT: firefox
+
 jobs:
   build:
     runs-on: ubuntu-latest

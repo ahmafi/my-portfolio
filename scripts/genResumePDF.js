@@ -15,15 +15,20 @@ const server = app.listen(PORT, () => {
   );
 
   (async () => {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto(`http://127.0.0.1:${PORT}/resume`, {
-      waitUntil: 'networkidle2',
+    // Using firefox as a workaround for these issues:
+    // https://github.com/puppeteer/puppeteer/issues/422
+    // https://github.com/puppeteer/puppeteer/issues/3183
+    const browser = await puppeteer.launch({
+      product: 'firefox',
     });
+    const page = await browser.newPage();
+    await page.goto(`http://127.0.0.1:${PORT}/resume`);
 
     // const date = new Date();
     // const dateString = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`;
+    await page.evaluateHandle('document.fonts.ready');
     const fileName = `AmirHosseinMafi-Resume.pdf`;
+
     await page.pdf({
       path: path.join(PDF_PATH, fileName),
       format: 'A4',
