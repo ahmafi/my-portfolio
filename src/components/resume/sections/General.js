@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { useTheme } from 'styled-components';
+import styled from 'styled-components';
 import Date from '../Date';
 import Icon from '../Icon';
 import Techs from '../Techs';
@@ -53,8 +53,6 @@ const Desc = styled.div`
 `;
 
 function General({ content }) {
-  const theme = useTheme();
-
   return (
     <Container>
       {content.map(
@@ -67,14 +65,12 @@ function General({ content }) {
                 {links && (
                   <Links>
                     {links.map((link) => (
-                      <a href={link.name} key={link.name}>
-                        <Icon
-                          name={link.icon}
-                          color={theme.accentColor}
-                          width={1.1}
-                          clickable
-                        />
-                      </a>
+                      <Icon
+                        key={link.name}
+                        href={link.name}
+                        name={link.icon}
+                        width={1.1}
+                      />
                     ))}
                   </Links>
                 )}

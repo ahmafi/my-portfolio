@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { useTheme } from 'styled-components';
+import styled, { css } from 'styled-components';
 import Icon from './Icon';
 import { smallerThan500, smallerThanA4 } from './media';
 
@@ -33,6 +33,29 @@ const InfoLine = styled.div`
   font-size: 1.1rem;
   text-decoration: none;
   color: ${({ theme }) => theme.color};
+
+  ${({ href }) =>
+    href &&
+    css`
+      :hover,
+      :focus {
+        outline-color: ${({ hc, theme }) => hc ?? theme.secondaryColor};
+        outline-offset: 2px;
+        color: ${({ theme }) => theme.secondaryColor};
+        svg {
+          fill: ${({ theme }) => theme.secondaryColor};
+        }
+      }
+
+      /* Backward compatibility
+         Undo :focus changes if it's not a :focus-visible */
+      :focus:not(:focus-visible) {
+        color: ${({ theme }) => theme.color};
+        svg {
+          fill: ${({ c, theme }) => c ?? theme.primaryColor};
+        }
+      }
+    `}
 `;
 
 const Text = styled.p`
@@ -41,15 +64,13 @@ const Text = styled.p`
 `;
 
 function Info({ data }) {
-  const theme = useTheme();
-
-  const infoColumn = (info) => (
+  const infoLines = (info) => (
     <InfoLine
       key={info.content}
       href={info.link}
       as={info.hasOwnProperty('link') ? 'a' : null}
     >
-      <Icon name={info.icon} color={theme.accentColor} width={1.1} />
+      <Icon name={info.icon} width={1.1} />
       <Text dir="ltr">{info.content}</Text>
     </InfoLine>
   );
@@ -59,12 +80,12 @@ function Info({ data }) {
       <InfoColumn>
         {data
           .slice(0, Math.ceil(data.length / 2))
-          .map((info) => infoColumn(info))}
+          .map((info) => infoLines(info))}
       </InfoColumn>
       <InfoColumn>
         {data
           .slice(Math.ceil(data.length / 2), data.length)
-          .map((info) => infoColumn(info))}
+          .map((info) => infoLines(info))}
       </InfoColumn>
     </Container>
   );

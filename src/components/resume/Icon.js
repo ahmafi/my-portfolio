@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 
 // FIXME: There should be a better dynamic import solution
@@ -43,11 +43,32 @@ const Container = styled.div`
   height: ${({ h }) => h};
 
   svg {
-    fill: ${({ c }) => c};
+    fill: ${({ c, theme }) => c ?? theme.primaryColor};
   }
+
+  ${({ href }) =>
+    href &&
+    css`
+      :hover,
+      :focus {
+        outline-color: ${({ hc, theme }) => hc ?? theme.secondaryColor};
+        outline-offset: 4px;
+        svg {
+          fill: ${({ hc, theme }) => hc ?? theme.secondaryColor};
+        }
+      }
+
+      /* Backward compatibility
+         Undo :focus changes if it's not a :focus-visible */
+      :focus:not(:focus-visible) {
+        svg {
+          fill: ${({ c, theme }) => c ?? theme.primaryColor};
+        }
+      }
+    `};
 `;
 
-function Icon({ name, color, width = 1, height, clickable }) {
+function Icon({ name, color, hoverColor, width = 1, height, href }) {
   height = height ?? width;
 
   const IconTag = IconNames[name];
@@ -58,7 +79,7 @@ function Icon({ name, color, width = 1, height, clickable }) {
   let resWidth = width;
   let resHeight = height;
 
-  if (clickable) {
+  if (href) {
     if (isSmallerThanA4) {
       resWidth = width * 1.2;
       resHeight = height * 1.2;
@@ -74,7 +95,14 @@ function Icon({ name, color, width = 1, height, clickable }) {
   resHeight = `${resHeight}em`;
 
   return (
-    <Container c={color} w={resWidth} h={resHeight}>
+    <Container
+      as={href ? 'a' : 'div'}
+      href={href}
+      c={color}
+      hc={hoverColor}
+      w={resWidth}
+      h={resHeight}
+    >
       <IconTag width={resWidth} height={resHeight} />
     </Container>
   );

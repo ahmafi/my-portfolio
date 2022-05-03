@@ -8,7 +8,7 @@ const Container = styled.div`
 `;
 
 const Skill = styled.div`
-  border: 2px solid ${({ theme }) => theme.accentColor};
+  border: 2px solid ${({ theme }) => theme.primaryColor};
   padding: 0.05em 0.15em 0 0.15em;
   margin: 0.12em 0.12em;
   border-radius: 4px;

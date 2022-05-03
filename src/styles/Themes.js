@@ -54,5 +54,6 @@ export const resumeTheme = {
   backgroundColor: '#fff',
   color: '#000',
   color2: '#585858',
-  accentColor: '#512da8',
+  primaryColor: '#512da8',
+  secondaryColor: '#0062AC',
 };
