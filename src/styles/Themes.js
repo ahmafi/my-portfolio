@@ -24,7 +24,10 @@ const colors = {
 
 const darkTheme = {
   backgroundColor: colors.neutral900,
+  primaryColor: '#7E57C2',
+  primaryColor2: '#9575CD',
   color: colors.neutral100,
+  color2: colors.neutral200,
   bgCard: colors.neutral700,
   colors: {
     text: {
@@ -44,7 +47,7 @@ const darkTheme = {
 
 const commonTheme = {
   sizes: {
-    socialIcons: '36px',
+    socialIcons: '40px',
   },
 };
 

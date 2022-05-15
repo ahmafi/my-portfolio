@@ -1,0 +1,62 @@
+job: Full-Stack Web Developer
+
+about: I build open-source tools for web developement and I also write about my
+  experiences at [webstack.ir](https://webstack.ir). I'm
+  currently focused on front-end development and I'm looking for a job.
+  Feel free to contact me.
+
+socials:
+  - name: Github
+    icon: github
+    link: https://github.com/ahmafi
+  - name: StackOverflow
+    icon: stackoverflow
+    link: https://stackoverflow.com/users/4725780/amir
+  - name: Twitter
+    icon: twitter
+    link: https://twitter.com/ahmafi99
+  - name: Telegram
+    icon: telegram
+    link: https://t.me/bountyhunter5
+  - name: Email
+    icon: email
+    link: mailto:amir77mafi@gmail.com
+
+sections:
+  projects:
+    - title: webstack.ir
+      subtitle: Front End Developer
+      links:
+        - name: https://webstack.ir
+          icon: external
+        - name: https://github.com/ahmafi/webstack
+          icon: github
+      desc: I have designed and developed this website to share my web development experiences
+      techs:
+        - TypeScript
+        - Next
+        - React
+        - Sass
+      startDate: 2022-05
+
+  experiences:
+    - title: Freelance [Lahzenegar](https://lahzenegar.com/)
+      subtitle: Full-Stack Developer
+      desc: Implementing a web crawler that gathers data from different websites and combines them into a single REST API. The configs of this server is controlled through an admin dashboard written in React
+      techs:
+        - React
+        - Express
+        - Styled-Components
+        - Jest
+        - React-Router
+        - REST
+        - OpenAPI
+        - Postman
+        - Winston
+        - JWT-Auth
+        - JSDoc
+      startDate: 2022-02
+      endDate: 2022-05
+
+  contributions:
+    - title: quick-lint-js
