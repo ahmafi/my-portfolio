@@ -39,25 +39,16 @@ sections:
       - JavaScript
       - ES6
       - React
-      - React Router
       - Webpack
-      - Parcel
       - Jest
-      - TypeScript
-      - Next
       - HTML/CSS
-      - Sass
-      - Tailwind
       - Styled-Components
       - REST
       - OpenAPI
-      - GraphQL
       - Postman
       - Git
       - Linux
       - Docker
-      - Scrum
-      - Trello
 
   languages:
     header:
